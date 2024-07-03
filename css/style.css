@@ -1,0 +1,879 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color:rgba(12, 12, 13, 0.8);
+}
+body{
+  height: 8000px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(221, 217, 212);
+  text-transform: capitalize;
+}
+.logo1 {
+  height: 70px;
+  margin-left: 150px;
+
+}
+.list1 {
+float: right;
+list-style: none;
+margin-top: 20px;
+font-family: "Roboto Condensed", sans-serif;
+font-size: 20px;
+color: rgb(221, 217, 212);
+
+
+}
+.list1 li {
+  display: inline-block;
+}
+
+.list1 li a {
+    position: relative;
+    text-decoration: none;
+    color:rgb(221, 217, 212);
+    padding: 5px 20px;
+    transition: 0.5s ease;
+}
+
+.list1 li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color:rgb(255, 70, 85);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+
+.list1  li a:hover::after{
+    visibility: visible;
+    transform: scaleX(1);
+  }
+.list1 li a.homeli::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color:rgb(255, 70, 85);
+    visibility: visible;
+    transform: scaleX(1);
+}
+.hov-lin{
+  position: relative;
+  
+}
+
+.extend{
+  display: block;
+}
+
+.pa-new{
+  bottom: -45px;
+  left: 72%   ;
+    position: absolute;
+    width: 150px;
+    background-color:rgb(255, 70, 85);
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 0;
+    border-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition:  0.5s;
+    text-transform: capitalize;
+  }
+
+  .hov-lin:hover + .pa-new{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .homeli .line1{
+  background-color:rgb(255, 70, 85);
+  width: 100px;
+  height: 5px;
+  border-radius: 3px; 
+  
+  }
+
+/************************************header**************************************************/
+
+.home{
+  height: 100vh;
+  background-image: url(../Images/homeValo.jpg);
+  position: relative;
+  background-size: 100%;
+}
+
+.home-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.home-content {
+  
+  position: absolute;
+  /*hero image*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 40px;
+  color: rgb(221, 217, 212);
+  text-transform: capitalize;
+}
+.home button{
+  width: 140px;
+  height: 50px;
+  font-size: 22px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-style: none;  
+  border-radius: 3px;
+  margin: 0 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.btn1{
+    background-color: rgb(27, 41, 56);
+    color: rgb(221, 217, 212);
+}
+.btn2{
+    background-color:  rgb(221, 217, 212);
+    color: rgb(27, 41, 56);
+}
+
+.btn1.hover-opacity:hover{
+  background-color: rgb(10, 16, 23);
+  transition: 0.5s;
+}
+.btn2.hover-opacity:hover{
+    background-color:  rgb(142, 137, 131);
+  transition: 0.5s;
+}
+
+/************************************HOME***************************/
+.about , .gameplay, .srvc{
+  padding-top: 80px;
+}
+
+.section-header .section-title , .gameplay .epicplay-title, .title{
+  text-align: center;
+  color: rgb(15, 25, 35);
+  margin-bottom: 10px;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+.section-header  .line1, .gameplay .line3{
+  display: block;
+  background-color:rgb(255, 70, 85);
+  width: 150px;
+  height: 5px;
+  margin: 0 auto 70px auto;
+  border-radius: 3px;
+}
+/**********************************section_1***********************************/
+.about{
+height: 100vh;
+}
+.container{
+  width: 88%;
+  margin: auto;
+}
+
+.about-item {
+  color: rgb(15, 25, 35);
+  position: relative;
+  text-align: center;
+  float: left;
+  width: 30%;
+  height: 300px;
+  border: 1px solid black;
+  padding: 30px;
+  margin-top: 8%;
+
+}
+.md{
+margin: 0 5%;
+}
+
+.about-item i{
+  font-size: 50px;
+  padding-bottom: 15px;
+  color: rgb(255, 70, 85);
+}
+
+.about-item-title{
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+}
+
+.about-item-desc{
+    font-weight:400;
+    letter-spacing: 1px;
+    padding-bottom: 25px;
+    color: rgb(88, 79, 79);
+}
+.about-item-link{
+  text-transform: capitalize;
+  font-size: 20px;
+  text-decoration: none;
+  color: blue;
+}
+
+.about-item::after, .itm::after
+{
+  content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgb(28, 26, 37);
+}
+.about-item:hover::after, .itm:hover::after
+{
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  opacity: 1;
+  z-index: -1;
+}
+
+.about-item:hover .about-item-title , .itm:hover .itm-title{
+  color: rgb(221, 217, 212);
+  transition: 0.2s;
+}
+
+.about-item:hover .about-item-desc , .itm:hover .itm-desc{
+  color: rgb(185, 156, 156);
+}
+
+/*************************1stsection-platforms*****************/
+
+.weapon-title{
+  padding-top: 40px;
+  color: rgb(221, 217, 212);
+  margin-bottom: 10px;
+  font-size: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.line2{
+ display: block;
+  background-color:rgb(255, 70, 85);
+  width: 150px;
+  height: 5px;
+  margin: 0 auto 70px auto;
+  border-radius: 3px; 
+}
+/****************************weapons-header*************************/
+.weapons{
+  height: 180vh;
+  background-color: rgb(15, 25, 35);
+}
+.weapons .container{
+  width: 88%;
+  margin: auto;
+text-align: center;
+}
+
+
+.skin{
+  position: relative;
+  float: left;
+  width: 30%;
+  margin-bottom: 20px;
+  padding:40px;
+}
+
+.skin img{
+  width: 100%;
+  height: 500px;
+  position:relative;
+  
+  }
+
+.skin-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(79, 71, 113, 0.7);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  visibility: hidden;
+  transition: 1s;
+  opacity: 0;
+  
+}  
+.skin:hover .skin-overlay{
+  visibility: visible;
+  opacity: 1;
+}
+ .skin-overlay .skin-overlay-info
+{position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  
+}
+.skin-overlay-info .category{
+  color: rgb(255, 70, 85);
+  font-size: 22px;
+  text-transform: uppercase;
+  display: block;
+padding-bottom: 30px  ;
+top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity .5s;
+    transition-delay: 0s;
+    position: relative;
+}
+
+.skin-overlay-title{
+  color:rgb(221, 217, 212);
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight:bolder;position: relative;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity .5s;
+    transition-delay: .4s;
+}
+.skin-overlay-info a{
+  position: relative;
+    top:15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity .5s;
+    transition-delay: .6s;
+  
+  display: inline-block;
+ /*  width: 40px;
+  height: 40px; */
+  text-decoration: none;
+}
+.skin-overlay-info  i{
+  color: rgb(15, 25, 35);
+background-color: rgb(255, 70, 85);
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  display: block;
+}
+.skin:hover .skin-overlay-title,
+.skin:hover .skin-overlay-info a,
+.skin:hover .skin-overlay-info .category{
+   top:0;
+   opacity: 1;
+   visibility: visible;
+}
+/*********************************2ndsection-Weapons************************************/
+
+.itm, .price-itm{
+    color: rgb(15, 25, 35);
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 200px;
+  border: 1px solid black;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.gme-itms .fas{
+  font-size: 32px;
+  color: rgb(255, 70, 85);
+}
+.gme-itms .itm-title{
+  display: inline;
+  margin-left: 15px;
+  color: rgb(15, 25, 35);
+  font-size: 30px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.gme-itms .itm-desc{
+  margin-left: 55px;
+  margin-top: 30px;
+  color: rgb(88, 79, 79);
+}
+/*********************************3rdsection-items***************************/
+.srvc{
+  margin-top: 300px;
+  padding: 120px 0;
+}
+.srvc-item{
+  width: 50%;
+  float: left;
+}
+.srvc .title{
+  text-align: left;
+  text-transform: capitalize  ;
+  font-size: 35px;
+  color: rgb(15, 25, 35);
+}
+.srvc .line4{
+  display: block;
+  background-color:rgb(255, 70, 85);
+  width: 83px;
+  height: 5px;
+  border-radius: 3px; 
+}
+.srvc-header{
+  padding-bottom: 40px;
+}
+.srvc-desc{
+  padding-bottom: 30px;
+  color: rgb(15, 25, 35);
+  letter-spacing: 2px;
+}
+.marks i{
+  font-size: 18px;
+}
+.marks p{
+  display: inline-block;
+    color: rgb(15, 25, 35);
+    padding-bottom: 10px;
+    
+
+}
+.srvc .container{
+  margin-top: 200px;
+}
+.bullets{
+  text-align: center;
+}
+.bullets li{
+  width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #a8a8a8;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+.bullets li:hover{
+    background-color: rgb(255, 70, 85);
+    transition: 0.7s;
+
+}
+.bullets li.colored{
+  background-color: rgb(255, 70, 85);
+}
+.srvc-item .img{
+  width: 50%;
+  margin: auto;
+}
+.srvc-item img{width: 100%;}
+
+
+/*************************3rd-section****************************/
+.status{
+  margin-top: 600px;
+  background-image: url(../Images/cut-valo.jpg);
+  height: 400px;
+  position: relative;
+  background-size: 100%;
+  background-attachment:fixed;
+}
+.status-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 25, 35, 0.5);
+  top: 0;
+  left: 0;
+}
+.numbers{
+  padding-top: 130px;
+}
+.num-itm{
+  text-align: center;
+  display: inline-block;
+  margin-left: 200px;
+}
+.num-itm i{
+  color: rgb(255, 70, 85);
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+.num-itm .num-itm-title{
+  color:rgb(242, 224, 224);
+  font-size: 20px;
+}
+.num-itm-desc{
+  color: rgb(242, 224, 224);
+  font-weight: 500;
+letter-spacing: 1px;
+text-transform: capitalize;
+}
+/* ***********************************status******************* */
+
+
+.title{
+  margin-top: 140px;
+  color: rgb(15, 25, 35);
+  margin-bottom: 10px;
+  font-size: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.line{
+ display: block;
+  background-color:rgb(255, 70, 85);
+  width: 150px;
+  height: 5px;
+  margin: 0 auto 70px auto;
+  border-radius: 3px; 
+}
+
+
+.price-itm{
+text-align: center;
+position: relative;
+height: 370px;
+}
+.price-plan-title{
+  text-transform: uppercase;
+  color: rgb(15, 25, 35);
+}
+.price-plan-info{
+  margin-top: 20px;
+  text-transform: capitalize;
+  color: rgb(15, 25, 35);
+}
+.circle{
+border: 2px solid rgb(255, 70, 85);
+width: 85px;
+height: 85px;
+border-radius: 100%;
+padding-top: 10px;
+margin-left: 50%;
+transform: translate(-50%);
+margin-top: 15px;
+text-transform: capitalize;
+border-width: 3px;
+
+}
+
+.price-itm::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left:0;
+  top: 0;
+  background-color: rgba(15, 25, 35, 0.5);
+  transition: 0.5s;
+  visibility: hidden;
+}
+.price-itm:hover::after{
+  visibility: visible;
+  height: 100%;
+}
+
+.price-itm:hover .price-plan-title,
+.price-itm:hover .circle{ 
+  color:rgb(13, 10, 147);
+}
+
+.buy-btn{
+  background-color:rgb(255, 70, 85);
+  height: 30px;
+  width: 120px;
+  font-weight: bold;
+  color: rgb(15, 25, 35);
+  border-style: none;
+  margin-top: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.buy-btn:hover{
+  height: 40px;
+  width:130px;
+  transition: 0.6s;
+}
+
+
+/*******************************************pricing************************************/
+.agent-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 25, 35, 0.5);
+  top: 0;
+  left: 0;
+  
+}
+
+.agent{
+  background-image: url(../Images/omen.jpg);
+  margin-top: 600px;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-attachment:fixed;
+}
+.agent-content{
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.agent-item{
+float: left;
+    width: 50%;
+    padding-right: 20px;
+    padding-top: 55px;
+    margin-bottom: 110px;
+  }
+  .agent-overview{
+    position: relative;
+    padding-top: 95px;
+    padding-left: 255px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    text-transform: capitalize;
+  }
+  .agent-desc{
+    padding-left: 180px;
+  }
+.agent-item  img{
+position: absolute;
+    top: 82px;
+    left: 175px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+}
+.agent-content h3{
+  color: rgb(221, 217, 212);
+}
+ .agent-desc{  
+  color:rgb(185, 156, 156);
+}
+.agent-content span{
+  color: rgb(255, 70, 85)
+}
+/*************************agents**********************/
+  .team-container{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 400px;
+  }
+  .teams{
+    padding: 120px 0;
+  }
+.team-header{
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(15, 25, 35);
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+padding-bottom: 90px;
+}
+
+ .team-content{
+  text-transform: capitalize;
+  padding-left: 70px ;
+ }
+.team-itm{
+  position: relative;
+  float: left;
+  width: 25%;
+  padding: 22px;
+  text-align: center;
+  background-color: rgb(15, 25, 35);
+}
+
+    .team-itm.mg{
+    margin: 0% 10%;
+    }
+.team-img{
+margin: auto;
+position: relative;
+}
+.team-img img{
+  width: 100%;
+}
+.team-overlay i{
+  display: block;
+      width: 40px;
+    height:40px ;
+  margin-left: auto;
+  line-height: 40px;
+  background-color: rgb(255, 70, 85);
+  color: rgb(221, 217, 212);
+  }
+  .team-overlay a{
+    text-decoration: none ;
+  }
+.team-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(15, 25, 35, 0.5);
+  visibility: hidden;
+}
+.team-itm:hover .team-overlay{
+visibility: visible;
+}
+
+.team-itm::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  opacity: 1;
+  background-color: rgb(52, 81, 109);
+  transition: 1s;
+}
+.team-itm:hover::after{
+  opacity: 0.4;
+height: 100%;
+}
+.team-info{
+  color: rgb(221, 217, 212);
+  letter-spacing: 1px;
+
+}
+/*********************************************************************/
+.maps .container{
+  width: 80%;
+  margin: auto;
+}
+.maps{
+    background-color: rgb(15, 25, 35);
+    height: 150vh;
+  }
+ 
+  .maps .title{
+    padding-top: 120px;
+    color: rgb(221, 217, 212);
+  }
+  .maps-header{
+    padding-bottom: 50px;
+  }
+  .maps-itm{
+    position: relative;
+    float: left;
+    width: 20%;
+    padding: 20px;
+
+  }
+  .maps-itm.mg{
+    margin: 0 17%;
+  }
+  .map-info{
+    width: 300px;
+  }
+  .maps-info-title, .map-list{
+    color: rgb(221, 217, 212);
+    text-transform: capitalize;
+  }
+  .map-list{
+    list-style: none ;
+  }
+  .map-list li{
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: capitalize;
+  }
+  .map-desc{
+    padding-top: 20px;
+    color: rgb(185, 156, 156);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+      
+  }
+.map-info  .read{
+  text-decoration: none;
+  color: rgb(255, 70, 85);
+  text-transform: capitalize;
+  }
+  .maps-itm::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 340px;
+    height: 0;
+    transition: 1s;
+    background-color: rgba(84, 84, 104, 0.4);
+    visibility: hidden;
+  }
+  .maps-itm:hover::after{
+    visibility: visible;
+    height: 100%;
+  }
+  /* ****************************** ***********/
+  .footer{
+    background-color: rgb(8, 14, 20);
+    height: 300px;
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  
+  .ft-links{
+ margin: 20px 0;
+  }
+  .ft-links li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(40, 40, 40);
+    line-height: 40px;
+    border-radius: 20%;
+    font-size: 25px;
+  }
+  .ft-links li:hover{
+
+  background-color: rgb(221, 217, 212);
+  }
+  .ft-links li:hover i{
+    color: rgb(15, 25, 35);
+    transition: 0.4s;
+    border-radius: 100%;
+  }
+
+  .ft-links i, p{
+color: rgb(221, 217, 212); 
+}
